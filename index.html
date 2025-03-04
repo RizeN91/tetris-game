@@ -1,5 +1,27 @@
-git init
-git add index.html
-git commit -m "Add Tetris game"
-git remote add origin https://github.com/<RizeN91>/<tetris-game>.git
-git push -u origin main
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tetris Game</title>
+    <style>
+        canvas { border: 1px solid black; }
+        #gameContainer { display: flex; }
+    </style>
+</head>
+<body>
+    <div id="gameContainer">
+        <canvas id="gameCanvas" width="300" height="600"></canvas>
+        <canvas id="nextCanvas" width="120" height="120"></canvas>
+    </div>
+    <script>
+        const canvas = document.getElementById('gameCanvas');
+        const ctx = canvas.getContext('2d');
+        const nextCanvas = document.getElementById('nextCanvas');
+        const nextCtx = nextCanvas.getContext('2d');
+        // Add your Tetris game JavaScript logic here
+        // Example: Draw a simple block
+        ctx.fillStyle = 'red';
+        ctx.fillRect(0, 0, 30, 30);
+    </script>
+</body>
+</html>
